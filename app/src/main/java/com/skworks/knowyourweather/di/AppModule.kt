@@ -1,7 +1,9 @@
-package com.skworks.knowyourweather
+package com.skworks.knowyourweather.di
 
 import android.content.Context
+import com.skworks.knowyourweather.DataStoreHelper
 import com.skworks.knowyourweather.Interface.WeatherService
+import com.skworks.knowyourweather.utils.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,7 +27,7 @@ object AppModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.openweathermap.org/data/2.5/")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

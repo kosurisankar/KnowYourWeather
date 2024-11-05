@@ -1,4 +1,4 @@
-package com.skworks.knowyourweather.data
+package com.skworks.knowyourweather.model
 
 data class WeatherResponse(
     val main: Main,
@@ -13,4 +13,8 @@ data class Main(
 data class Weather(
     val description: String,
     val icon: String
+)
+
+data class CityResponse(
+    val name: String
 )
